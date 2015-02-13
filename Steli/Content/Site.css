@@ -28,7 +28,7 @@ a {
     }
 
     a:hover {
-        background-color: #c7d1d6;
+        background-color: #f3f5f6;
     }
 
 header, footer, hgroup,
@@ -129,15 +129,15 @@ footer {
 /* site title
 ----------------------------------------------------------*/
 .site-title {
-    color: #c8c8c8;
-    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    color: #FF5300;
+    font-family: Calibri, Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 2.3em;
     margin: 0;
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
     background: none;
-    color: #c8c8c8;
+    color: #FF5300;
     outline: none;
     text-decoration: none;
 }
@@ -195,12 +195,12 @@ ul#menu {
 
         ul#menu li a {
             background: none;
-            color: #999;
+            color: #fff;
             text-decoration: none;
         }
 
         ul#menu li a:hover {
-            color: #333;
+            color: #999;
             text-decoration: none;
         }
 
@@ -213,13 +213,13 @@ ul#menu {
 }
 
     .featured .content-wrapper {
-        background-color: #7ac0da;
-        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
-        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        color: #3e5667;
+        background-color: #00CCCC;
+        background-image: -ms-linear-gradient(left, #00CCCC 0%, #30D5C8 100%);
+        background-image: -o-linear-gradient(left, #00CCCC 0%, #30D5C8 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #00CCCC), color-stop(1, #30D5C8));
+        background-image: -webkit-linear-gradient(left, #00CCCC 0%, #30D5C8 100%);
+        background-image: linear-gradient(left, #00CCCC  0%, #30D5C8 100%);
+        color: #01796F;
         padding: 20px 40px 30px 40px;
     }
 
@@ -230,6 +230,25 @@ ul#menu {
         .featured p {
             font-size: 1.1em;
         }
+
+
+/*My css code*/
+/*begin-----------------------------------------------*/
+.header-class {
+    background-color: #fff;
+}
+
+    .header-class .content-wrapper {
+        background-color: #303030;
+        /*background-image: -ms-linear-gradient(left, #00CCCC 0%, #30D5C8 100%);*/
+        /*background-image: -o-linear-gradient(left, #00CCCC 0%, #30D5C8 100%);*/
+        /*background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #00CCCC), color-stop(1, #30D5C8));*/
+        /*background-image: -webkit-linear-gradient(left, #00CCCC 0%, #30D5C8 100%);*/
+        /*background-image: linear-gradient(left, #00CCCC  0%, #30D5C8 100%);*/
+        color: #01796F;
+        padding: 15px 40px 40px 40px;
+    }
+/*end-------------------------------------------------*/
 
 /* page titles */
 hgroup.title {

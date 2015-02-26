@@ -17,7 +17,7 @@ namespace Steli.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Message = "Відгуки про нашу роботу.";
 
             return View();
         }
@@ -31,14 +31,14 @@ namespace Steli.Controllers
 
         public ActionResult Prices()
         {
-            ViewBag.Message = "Зв'яжіться з нами.";
+            ViewBag.Message = "Найкращі ціни тільки для Вас.";
 
             return View();
         }
 
         public ActionResult Offers()
         {
-            ViewBag.Message = "Зв'яжіться з нами.";
+            ViewBag.Message = "Замовляйте та отримайте знижку.";
 
             return View();
         }

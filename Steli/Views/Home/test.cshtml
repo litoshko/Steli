@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "test";
+}
+
+<h2>test</h2>
+@{
+    var totalMessage = "";
+    if (IsPost)
+    {
+        var a = Request.Form["frmHa"].AsFloat();
+        var b = Request.Form["frmHb"].AsFloat();
+        var c = Request.Form["frmHc"].AsFloat();
+        var d = Request.Form["frmHd"].AsFloat();
+        var x = Request.Form["frmWx"].AsFloat();
+        var y = Request.Form["frmWy"].AsFloat();
+        var Vol_1 = 1.0 / 6.0 * x * y * (a + c + 2 * b + 2 * d);
+        var Vol_2 = 1.0 / 6.0 * x * y * (b + d + 2 * a + 2 * c);
+        var max = Math.Max(Vol_1, Vol_2);
+        var min = Math.Min(Vol_1, Vol_2); ;
+        totalMessage = "Об'єм max = " + max.ToString("0.00") + " Об'єм min = " + min.ToString("0.00");
+    }
+}
+<div class="float-left">
+    <form method="post">
+    <p>
+        <label for="text1">A:</label>
+        <input type="text" name="frmHa" value="@Request.Form["frmHa"]" />m
+    </p>
+    <p>
+        <label for="text2">B:</label>
+        <input type="text" name="frmHb" value="@Request.Form["frmHb"]" />m
+    </p>
+    <p>
+        <label for="text3">C:</label>
+        <input type="text" name="frmHc" value="@Request.Form["frmHc"]" />m
+    </p>
+    <p>
+        <label for="text4">D:</label>
+        <input type="text" name="frmHd" value="@Request.Form["frmHd"]" >m
+    </p>
+    <p>
+        <label for="text1">X:</label>
+        <input type="text" name="frmWx" value="@Request.Form["frmWx"]" />m
+    </p>
+    <p>
+        <label for="text1">Y:</label>
+        <input type="text" name="frmWy" value="@Request.Form["frmWy"]" />m
+    </p>
+    <p>
+        <input type="submit" value="Calculate" /></p>
+    </form>
+    <p>@totalMessage</p>
+</div>
+<div class="float-right">
+    <img src="~/Images/dimensions.jpg" />
+</div>

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "LZ split";
+}
+
+<h2>LZ split</h2>
+@{
+    var totalMessage = "";
+    var totalMessageSize = "";
+    if (IsPost)
+    {
+        var a = Request.Form["frmHa"];
+        bool valid;
+        valid = System.Text.RegularExpressions.Regex.IsMatch(a, "^[0-1]*?$");
+        if (valid) {
+            List<string> abc = new List<string>();
+            string input = a;
+            int length = input.Length;
+            string temp = "";
+            bool search = false;
+            for(int i = 0; i < length; i++)
+            {
+                temp = temp + input[i];
+                search = false;
+                foreach (string value in abc)
+                {
+                    if (value.Equals(temp))
+                    {
+                        search = true;   
+                    }
+                }
+                if (!search)
+                {
+                    abc.Add(temp);
+                    temp = "";
+                }
+            }
+            totalMessageSize = abc.Count.ToString("0");
+            if (temp.Length > 0)
+            {
+                abc.Add(temp);
+            }
+            totalMessage = String.Join(",", abc.ToArray());
+        }
+        else{
+            totalMessage = "Error!\nNot a binary input. Please, input 0 or 1 only.";
+        }
+    }
+}
+<div class="float-left">
+    <form method="post">
+    <p>
+        <label for="text1">Input binary string:</label>
+        <textarea cols="40" rows="5" name="frmHa">@Request.Form["frmHa"]</textarea>
+    </p>
+    <p>
+        <input type="submit" value="Calculate" />
+    </p>
+    <p>
+        <label for="text2">Output LZ split:</label>
+        <textarea cols="40" rows="5" name="frmHb" disabled>@totalMessage</textarea>
+    </p>
+    </form>
+    <p><b>Size of alphabet: </b>@totalMessageSize</p>
+</div>

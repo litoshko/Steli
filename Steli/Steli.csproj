@@ -313,6 +313,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Prices.cshtml" />
     <Content Include="Views\Home\Offers.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Home\LZ_split.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

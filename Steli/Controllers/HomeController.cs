@@ -42,5 +42,19 @@ namespace Steli.Controllers
 
             return View();
         }
+
+        public ActionResult test()
+        {
+            ViewBag.Message = "Замовляйте та отримайте знижку.";
+
+            return View();
+        }
+
+        public ActionResult lz_split()
+        {
+            ViewBag.Message = "Замовляйте та отримайте знижку.";
+
+            return View();
+        }
     }
 }
